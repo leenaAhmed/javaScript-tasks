@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "lina",
+    "Age": 22,
+    "Address": "123 Main St",
+    "Skills ": ["drawing", "reading", "writing"],
+    "IsLeader ": true
+  },
+  {
+    "id": 2,
+    "name": "sondos",
+    "Age": 22,
+    "Address": "123 Main St",
+    "Skills ": ["drawing", "reading", "writing"],
+    "IsLeader ": true
+  },
+  {
+    "id": 3,
+    "name": "marwa",
+    "Age": 22,
+    "Address": "123 Main St",
+    "Skills ": ["drawing", "reading", "writing"],
+    "IsLeader ": true
+  },
+  {
+    "id": 4,
+    "name": "aya",
+    "Age": 22,
+    "Address": "123 Main St",
+    "Skills ": ["drawing", "reading", "writing"],
+    "IsLeader ": true
+  }
+]
