@@ -37,16 +37,7 @@ function palindrome() {
 //  validates and displays it with a welcoming message with today’s date
 function validatesAndDisplays() {
   var colors = prompt("choice your favorite colors ", "1)red ,2)green ,4)blue");
-  // var info = [
-  //   [name, PhoneNumber, MobileNumber, email],
-  //   [NameExp, PhoneeExp, MobileExp, emailExp],
-  // ];
-  // for (var i = 0; i < info[0].length; i++) {
-  //   var infoExp = info[1][i];
-  //   if (infoExp.test(info[0][i])) {
-  //     console.log(info[0][i], info[1][i]);
-  //   }
-  // }
+ 
 
   var name = prompt("plz enter your name ");
   var NameExp = /^([a-zA-Z]{3,}\s[a-zA-Z]{3,})*$/;

@@ -27,25 +27,25 @@ function PrintDate() {
 // 3 his Full Name and email address
 // /^(01)(1|2|5|0)[0-9]{8}$/;
 
-// var hisFullName = prompt("Enter your full name");
-// var NameReg = /^([a-zA-Z]{3,}\s[a-zA-Z]{3,})*$/;
+var hisFullName = prompt("Enter your full name");
+var NameReg = /^([a-zA-Z]{3,}\s[a-zA-Z]{3,})*$/;
 
-// if (NameReg.test(hisFullName)) {
-//   alert(hisFullName);
-// } else {
-//   hisFullName = prompt("Enter your full name");
-// }
+if (NameReg.test(hisFullName)) {
+  alert(hisFullName);
+} else {
+  hisFullName = prompt("Enter your full name");
+}
 
-// var email = prompt("Enter your email address");
-// var emailExp = /^[a-zA-Z]{3,}(@)([0-9]){4,}(.com|.net|.edu|.org).eg$/;
-// var test = emailExp.test(email);
-// do {
-//   if (test) {
-//     alert(email);
-//   } else {
-//     email = prompt("Enter your email address");
-//   }
-// } while (!test);
+var email = prompt("Enter your email address");
+var emailExp = /^[a-zA-Z]{3,}(@)([0-9]){4,}(.com|.net|.edu|.org).eg$/;
+var test = emailExp.test(email);
+do {
+  if (test) {
+    alert(email);
+  } else {
+    email = prompt("Enter your email address");
+  }
+} while (!test);
 
 // 4.4-	Create an array that hold the following students grades :
 var students = [60, 10, 15, 85, 150, 120];
