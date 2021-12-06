@@ -1,0 +1,35 @@
+#main {
+  margin: 0 auto;
+  width: 800px;
+  background-color: rgb(236, 160, 160);
+  overflow: hidden;
+}
+
+div {
+  float: left;
+  margin: 20px;
+
+  background-color: rgb(53, 44, 44);
+}
+div img {
+  opacity: 0;
+  width: 150px;
+  height: 150px;
+}
+h1 {
+  text-align: center;
+}
+
+.sucess {
+  background-color: rgb(107, 56, 56);
+  width: 95%;
+  height: 90%;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 15;
+  font-size: 35px;
+  display: none;
+}
