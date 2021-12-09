@@ -2,9 +2,17 @@
 var user;
 var pass;
 
+function saveLocal() {
+  var inputs1 = document.getElementById("inpsto1");
+  var inputs2 = document.getElementById("inpsto2");
+
+  localStorage.setItem("userName1", inputs1.value);
+  localStorage.setItem("password1", inputs2.value);
+}
+//
 onload = function retrieveLocalStorage() {
-  var name = localStorage.getItem("userName");
-  var password = localStorage.getItem("password");
+  var name = localStorage.getItem("userName1");
+  var password = localStorage.getItem("password1");
 
   document.getElementById("storedname").innerHTML =
     "Hello, " + name + "! Welcome!";
@@ -15,8 +23,8 @@ onload = function retrieveLocalStorage() {
 function saveLocalStorage() {
   if (document.getElementById("key").checked) {
     var inputs = document.getElementsByTagName("input");
-    user = localStorage.setItem("userName", inputs[0].value);
-    pass = localStorage.setItem("password", inputs[1].value);
+    user = localStorage.setItem("userName", inputs[3].value);
+    pass = localStorage.setItem("password", inputs[4].value);
   } else {
     localStorage.removeItem("userName");
     localStorage.removeItem("password");
@@ -55,5 +63,7 @@ function displaycookie() {
   var user = cookies["cookieusernam"];
   var password = cookies["cookiepassword"];
 
-  document.getElementsByTagName("span")[0].innerHTML = `<p> user name : ${user} <span> </span> password : <strong> ${password}</strong </p> `;
+  document.getElementsByTagName(
+    "span"
+  )[0].innerHTML = `<p> user name : ${user} <span> </span> password : <strong> ${password}</strong </p> `;
 }
