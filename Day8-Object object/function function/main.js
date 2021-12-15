@@ -65,31 +65,23 @@ console.log(rever5);
 //
 var obj = {
   id: "SD-10",
-  location: "SV",
   addr: "123 st.",
   name: "mona",
   getSetGen: function () {
-    for (const key in this) {
-      if (typeof this[key] !== "function") {
-        console.log("get" + key, this[key]);
-        var newData = `get${key}`;
-        this[newData] = this[key];
-        Object.defineProperty(this, key, {
-          set: function (val) {
-            this[newData] = val;
-          },
-          get: function () {
-            return this[newData];
-          },
-        });
-      }
+    for (let key in this) {
+      this["get" + key] = function () {
+        return this[key];
+      };
+      this["set" + key] = function (value) {
+        this[key] = value;
+      };
     }
   },
 };
 obj.getSetGen();
 var user = { name: "Ali", age: 10 };
-obj.getName = { name: "Ali", age: 10 };
-console.log();
+obj.getSetGen.call(user);
+
 // using of getSetGen() will generate the following getId(), setId(),
 // getLocation(), setLocation(), getAddr(), setAddr().
 // If you created the following object
@@ -97,19 +89,3 @@ console.log();
 // When applying getSetGen() on user object (you can use call or
 // bind or apply), it will result in creating the following : getName(),
 // getAge(),setName(),setAge().
-// getSetGen: function () {
-//   for (var i in this) {
-//     if (typeof this[i] !== "function") {
-//       (function (j) {
-//         Object.defineProperty(this, j, {
-//           get: function () {
-//             return "get" + this[j];
-//           },
-//           set: function (val) {
-//             this[j] = val;
-//           },
-//         });
-//       })(i);
-//     }
-//   }
-// },

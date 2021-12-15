@@ -4,7 +4,7 @@ var win;
 var j = 0;
 var timer;
 function typingmessage() {
-  var gmessage = " your";
+  var gmessage = " your are welcome ";
 
   timer = setInterval(function () {
     document.getElementById("message").innerHTML += gmessage[j++];
