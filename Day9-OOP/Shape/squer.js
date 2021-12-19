@@ -3,14 +3,19 @@ function Shape(side) {
   if (this.constructor == Shape) {
     throw "you can't instance ";
   }
+
   this.side = side;
 }
+var count = 0;
 
 function Rectangle(side, height) {
   //inhetance
-  Shape.call(this, side);
-
+  if (this.constructor == Rectangle && Rectangle.count == 1) {
+    throw "not allowed  ";
+  }
+  if (this.constructor == Rectangle) Rectangle.count++;
   this.height = height ? height : 1;
+  Shape.call(this, side);
 }
 
 Rectangle.prototype = Object.create(Shape.prototype);
@@ -22,9 +27,17 @@ Rectangle.prototype.calculateArea = function () {
 
 var rect = new Rectangle(5, 10);
 
+console.log(rect.calculateArea());
+
 function Square(side) {
+  if (this.constructor == Rectangle && Rectangle.count == 1) {
+    throw "not allowed  ";
+  }
+  if (this.constructor == Rectangle) Rectangle.count++;
   Rectangle.call(this, side, side);
 }
 Square.prototype = Object.create(Rectangle.prototype);
 Square.prototype.constructor = Square;
+
 var squ = new Square(5);
+console.log(squ.calculateArea());

@@ -1,0 +1,67 @@
+{
+  "Dept": {
+    "name": "SD",
+    "Head": {
+      "Name": "Eng.Hany Safwat",
+      "Tel": "123",
+      "EMail": "hsafwat@iti.gov.eg"
+    },
+    "Categories": {
+      "Category": [
+        {
+          "Name": "Programming Languages",
+          "Courses": {
+            "-No": "2",
+            "Course": [
+              {
+                "Name": "JAVA",
+                "Hours": "30"
+              },
+              {
+                "Name": "CSharp",
+                "Hours": "80"
+              }
+            ]
+          }
+        },
+        {
+          "Name": "Web Development",
+          "Courses": {
+            "-No": "3",
+            "Course": [
+              {
+                "Name": "HTML",
+                "Hours": "15"
+              },
+              {
+                "Name": "JavaScript",
+                "Hours": "36"
+              },
+              {
+                "Name": "ASP.Net",
+                "Hours": "30"
+              }
+            ]
+          }
+        },
+        {
+          "-Name": "Database Development",
+          "Courses": {
+            "-No": "2",
+            "Course": [
+              {
+                "Name": "Oracle",
+                "Hours": "50"
+              },
+              {
+                "Name": "MS SQL Server",
+                "Hours": "70"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "#omit-xml-declaration": "yes"
+}
