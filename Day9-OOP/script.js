@@ -21,23 +21,23 @@ function Range(start, end, step = 1) {
   // this.append = function (step) {
 
   // };
-  Object.defineProperties(node, {
-    start: {
-      enumerable: false,
-      configurable: false,
-      writable: false,
-    },
-    end: {
-      enumerable: false,
-      configurable: false,
-      writable: false,
-    },
-    step: {
-      enumerable: false,
-      configurable: false,
-      writable: false,
-    },
-  });
+  // Object.defineProperties(node, {
+  //   start: {
+  //     enumerable: false,
+  //     configurable: false,
+  //     writable: false,
+  //   },
+  //   end: {
+  //     enumerable: false,
+  //     configurable: false,
+  //     writable: false,
+  //   },
+  //   step: {
+  //     enumerable: false,
+  //     configurable: false,
+  //     writable: false,
+  //   },
+  // });
   return re;
 }
 //  2 + (0 * 3) = 2 , 2+(1*3)=5 , 2+(2*3) = 7 , 2+(3*3) = 11 , 2+(4*3) =14 ...
@@ -72,6 +72,7 @@ Rectangle.prototype.toString = function () {
 var rect = new Rectangle(15, 10);
 var rect2 = new Rectangle(15, 10);
 var rect3 = new Rectangle(15, 10);
+var rect4 = new Rectangle(15, 10);
 
 console.log("rectangle perimeter = ", rect.perimeter());
 console.log(" Aree = ", rect.area());
